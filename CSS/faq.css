@@ -1,0 +1,318 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+:root {
+    --main-color : #fff;
+    --btn: #3abb9d;
+    --btn-hover: #00ffc3;
+    --xs-small1-2: 1rem;
+    --small1-2: 1.2rem;
+    --medium1-5: 1.5rem;
+    --large1-7: 1.7rem;
+    --x-large1-8: 1.8rem;
+    --xx-large2-1: 2.1rem;
+    --xxx-large2-4: 2.4rem;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+.faqmainpara{
+    font-size: var(--medium1-5);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin: 5px;
+    color: #fff;
+}
+p.faqboldtext{
+    margin-top: 8%;
+    font-weight: 900;
+}
+p.faqthintext{
+    margin-top: 3%;
+    font-weight: 100;
+    margin-bottom: 10%;
+}
+
+.faqp-mainsection{
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(33.33%,1fr) minmax(66.66%,2fr);
+    grid-template-areas: "faqp-responsivediv2 faqp-responsivediv3 ";
+    align-items: center;
+    background-image: url("../img/aurora.jpg");
+    background-repeat:repeat;
+    background-size:contain;
+   
+    overflow: hidden;
+    overflow-y: auto;
+}
+.faqp-responsivediv2{
+    grid-area: faqp-responsivediv2 ;
+    height: 100%; 
+}
+.faqp-responsivediv3{
+    grid-area: faqp-responsivediv3 ;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: auto;
+}
+.faqp-maindiv{
+    height: 100%;
+    padding:0 10% 0 10%;    
+}
+.faqp-maindiv img{    
+    margin-top: 15% ;
+}
+
+
+
+/*  */
+.faqquestionandanswer
+{
+    margin-top: 5%;
+    margin-left: 10%;
+}
+.faqquestion{
+    font-size: var(--medium1-5);
+    font-weight: 900;
+    color: var(--main-color);
+}
+.faqansewer{
+    font-size: var(--small1-2);
+    color: var(--main-color);
+    margin-top: 1%;
+}
+.faqp-responsivediv3 h2{
+    font-size: 3rem;
+    margin-top: 8%;
+    margin-left: 10%;
+    color: var(--main-color);
+}
+
+
+@media screen and (max-width:1230px)  and (orientation : Portrait) {
+
+    .faqp-mainsection{
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-rows: minmax(350fr,500px) 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "faqp-responsivediv2" "faqp-responsivediv3 ";
+        align-items: center;
+        background-image: url("../img/aurora.jpg");
+        background-repeat:repeat;
+        background-size:contain;
+       
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .faqmainpara{
+        font-size: var(--x-large1-8);
+    }
+    .faqp-maindiv{
+        height: 100%;
+        padding:0 5% 0 5%;    
+    }
+    .faqquestionandanswer{
+        margin: 5%;
+    }
+    .faqp-responsivediv3 h2{
+        font-size: 3rem;
+        margin-top: 8%;
+        margin-left: 5%;
+        
+    }
+
+    .faqquestion{
+        font-size: var(--medium1-5);
+        font-weight: 900;
+        color: var(--main-color);
+    }
+    .faqansewer{
+        font-size: var(--small1-2);
+        color: var(--main-color);
+        margin-top: 1%;
+    }
+
+    .faqlogoimage{
+        height: 100px;
+        width: auto;
+    }
+
+}
+
+
+@media screen and (max-width:650px)  and (orientation : Portrait) {
+
+    .faqp-mainsection{
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-rows: minmax(350fr,500px) 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "faqp-responsivediv2" "faqp-responsivediv3 ";
+        align-items: center;
+        background-image: url("../img/aurora.jpg");
+        background-repeat:repeat;
+        background-size:contain;
+       
+        overflow: auto;
+        overflow-y: auto;
+    }
+
+    .faqmainpara{
+        font-size: var(--small1-2);
+    }
+    .faqp-maindiv{
+        height: 100%;
+        padding:0 3% 0 3%;    
+    }
+    .faqquestionandanswer{
+        margin: 8% 3%;
+    }
+    .faqp-responsivediv3 h2{
+        font-size: var(--xxx-large2-4);
+        margin-top: 8%;
+        margin-left: 3%;
+        
+    }
+
+    .faqquestion{
+        font-size: var(--medium1-5);
+        font-weight: 900;
+        color: var(--main-color);
+    }
+    .faqansewer{
+        font-size: var(--small1-2);
+        color: var(--main-color);
+        margin-top: 1%;
+    }
+
+    .faqlogoimage{
+        height: 70px;
+        width: auto;
+    }
+
+}
+
+
+
+@media screen and (max-width:1230px)  and (orientation : landscape) {
+
+    .faqp-mainsection{
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-rows: minmax(350fr,500px) 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "faqp-responsivediv2" "faqp-responsivediv3 ";
+        align-items: center;
+        background-image: url("../img/aurora.jpg");
+        background-repeat:repeat;
+        background-size:contain;
+       
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .faqmainpara{
+        font-size: var(--x-large1-8);
+    }
+    .faqp-maindiv{
+        height: 100%;
+        padding:0 5% 0 5%;    
+    }
+    .faqquestionandanswer{
+        margin: 5%;
+    }
+    .faqp-responsivediv3 h2{
+        font-size: 3rem;
+        margin-top: 8%;
+        margin-left: 5%;
+        
+    }
+
+    .faqquestion{
+        font-size: var(--medium1-5);
+        font-weight: 900;
+        color: var(--main-color);
+    }
+    .faqansewer{
+        font-size: var(--small1-2);
+        color: var(--main-color);
+        margin-top: 1%;
+    }
+
+    .faqlogoimage{
+        height: 100px;
+        width: auto;
+    }
+
+}
+
+
+@media screen and (max-width:650px)  and (orientation : landscape) {
+
+    .faqp-mainsection{
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-rows: minmax(350fr,500px) 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "faqp-responsivediv2" "faqp-responsivediv3 ";
+        align-items: center;
+        background-image: url("../img/aurora.jpg");
+        background-repeat:repeat;
+        background-size:contain;
+       
+        overflow: auto;
+        overflow-y: auto;
+    }
+
+    .faqmainpara{
+        font-size: var(--small1-2);
+    }
+    .faqp-maindiv{
+        height: 100%;
+        padding:0 3% 0 3%;    
+    }
+    .faqquestionandanswer{
+        margin: 8% 3%;
+    }
+    .faqp-responsivediv3 h2{
+        font-size: var(--xxx-large2-4);
+        margin-top: 8%;
+        margin-left: 3%;
+        
+    }
+
+    .faqquestion{
+        font-size: var(--medium1-5);
+        font-weight: 900;
+        color: var(--main-color);
+    }
+    .faqansewer{
+        font-size: var(--small1-2);
+        color: var(--main-color);
+        margin-top: 1%;
+    }
+
+    .faqlogoimage{
+        height: 70px;
+        width: auto;
+    }
+
+}
+
+
+

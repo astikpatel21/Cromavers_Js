@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Croma Electronics | Online Electronics Shopping | Buy Electronics Online</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    
+    <section class="mainsection">
+        <div class="responsivediv1 hiddendiv"></div>
+        <div class="responsivediv2 maindiv">
+            <div class="submaindiv">
+
+                
+                <img src="./img/logowebsitemain.png" alt="main logo" height="120" width="auto">
+                <!-- <h1>all about</h1> -->
+                <p class="mainpara boldtext">ANNUAL CONFERENCE, 2023</p>
+                <p class="mainpara thintext">PEOPLE .PURPOSE .Passion</p>
+                <form id="emailform"  target="_self" method="get" onclick="">
+                    <div class="emailform">
+                        
+                            <label for="emailid" class="mainlable">Enter your email address
+                            </label><br>
+                            
+                            <input type="text" name="mailid" id="emailid" placeholder="sample@croma.com" >
+                            <small class="error-message"></small>
+                            <button type="submit" id="submitbutton">Ragister </button>
+                        
+                    </div>
+                </form>
+                <p class="footerpara margin-top-25">If you are alrady, please <a href="#" target="_blank" rel="noopener noreferrer">click hear to login</a></p>
+                <p class="footerpara">If you have trouble logging in, please contact us at <a href="mailto:cromaverse@croma.com" target="_blank" rel="noopener noreferrer" class="fontdecornone">cromaverse@croma.com</a></p>
+                
+            </div>
+        </div>
+
+        <div class="responsivediv3 hiddendiv">
+            
+        </div>
+    </section>
+    <script>
+
+
+
+        const formDetails = document.querySelector("form");
+        const formIdDetails = document.getElementById("emailform");
+        const emailValidation = document.getElementById("emailid");
+        const submitButton = document.getElementById("submitbutton");
+        // console.dir(formDetails);
+        // console.dir(emailValidation);
+        // console.log(emailform);
+
+
+        // // // // add Event
+
+        formIdDetails.addEventListener("submit", (event) => { 
+            // console.log(event);
+            event.preventDefault(); 
+            Validate();
+            
+        })
+
+
+        // // Final datavelidation :::  SuccessMes 
+        
+        const SuccessMes = (emailId) => {
+            let formCon = document.querySelector(".emailform");
+            console.log(formCon.className);
+            if(formCon.className === "emailform success"){
+                console.log("inside if");
+                location.href = `http://127.0.0.1:5500/OTPindex.html?mailid=${emailId}`;
+                // document.location.herf=`OTPindex.html`;
+                // console.log(document.location.herf);
+                // console.log(document.URL); 
+                // let form = document.querySelector("form");
+                // console.dir(form.action);
+                // form.action = `http://127.0.0.1:5500/OTPindex.html?mailid=${emailId}`;
+            }
+            else{
+                return false;
+            }
+
+            
+            // document.location.herf
+
+        //    for(let i=0; i<formCon.length; i++ ){
+        //     if (formCon[i].classname == "emailform success"){
+
+        //     }
+
+        //    }
+           
+            
+        }
+
+        // // Email validate
+
+        const isEmail = (emailId) => {
+
+                                        // // // // Use Case : 1 ____________________________________________________
+
+            var mailFormate = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (emailId.match(mailFormate)){
+                return true;
+            }else{
+                return false;
+            }
+        
+
+                                        // // // // Use Case : 2 ____________________________________________________
+
+            // var atSymbol = emailId.indexOf("@");
+            // if(atSymbol<1) return false;
+            // var atDot = emailId.lastIndexOf(".");
+            // if (atDot <= atSymbol+2 ) return false; 
+            // if (atDot === emailId.length-1) return false;
+            // return true; 
+        }
+
+
+        // // Define velidate funcution
+  
+        const Validate = () => {
+                const emailId = emailValidation.value.trim();
+
+                // validate Email
+                if (emailId ===""){
+                    setErrorMessage(emailValidation, `Email cannot Blank`)
+                }
+                else if ( !isEmail(emailId)) {
+                    setErrorMessage(emailValidation, `Not A valid Email `)
+                }
+                else{
+                    setSuccessMessage(emailValidation, '');
+                }
+
+                SuccessMes(emailId);
+
+        }
+        
+        function setErrorMessage (input, message){
+
+            const formSelect = input.parentElement;
+            const small = formSelect.querySelector("small");
+            formSelect.className = "emailform error"
+            small.innerText = message; 
+
+        }
+        function setSuccessMessage(input,message) {
+            const formSelect = input.parentElement;
+            formSelect.className = "emailform success"
+            const small = formSelect.querySelector("small");
+            small.innerText = message;
+        }
+
+
+
+    </script>
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/Questionsubmission.css">
+</head>
+<body>
+    <section class="questionp-mainsection">
+        <!-- <video src="../img/video.mp4" loop muted play-inline autoplay class="back-video">
+            
+        </video> -->
+        
+        
+        <div class="questionp-responsivediv2 questionp-maindiv">
+            <div class="questionp-subgrid">
+                <img src="../img/logowebsitemain.png" alt="main logo" height="80" width="auto">
+                <p class="questionp-mainpara">
+        Croma’s journey is one of constant <br class="que-brmobileview">
+        innovation and exploration. And <br class="que-brmobileview">
+        Cromaverse reflects its values and growth, <br class="que-brmobileview">
+        mirroring an ever-expanding universe. <br><br>
+        
+        It is an opportunity for us to bring<br class="que-brmobileview">
+        together our brightest minds, and to share<br class="que-brmobileview">
+        learnings and new experiences, while<br class="que-brmobileview">
+        honouring those who have helped shape<br class="que-brmobileview">
+        Croma into the force it is today.<br class="que-brmobileview">
+
+                </p>
+                <img class="Question-positionrightbuttom" src="../img/Screenshot_2023-03-14_131633-removebg-preview.png" alt="" height="175" width="auto">
+                
+            </div>
+        </div>
+
+        <div class="questionp-responsivediv3 questionp-hiddendiv">
+        
+        
+
+            
+            
+            <div class="question-laststepsection1 fullheight">
+                <p class="paralaststepsection">
+                    One last step
+                </p>
+                <h2 class="head2laststepsection">Here's your chance to shine</h2>
+            </div>
+            <form action="" method="post" id="questionform" onsubmit="return validation()">
+                <div class="questionsectiongrid">
+                
+                    <div class="question-laststepsection2">
+                        <div class="questionone">
+                            <label for="firstquestion">
+                                <div class="questionsection">
+                                    <span class="questionnumberspan ques-inlineblock">1</span>
+                                    <p class="paraquestionsection ques-inlineblock">
+                                        post a question for our <br class="que-brmobileview">leadership team        
+                                    </p>
+                                </div>
+                            </label>
+                            <textarea name="firstquestion" id="firstquestion" cols="30" rows="8" maxlength="280" placeholder="ex. What is going to be croma's key strength in the coming year? (280 characters)"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="question-laststepsection3">
+                        <div class="questiontwo">
+                            <label for="secondquestion">
+                                <div class="questionsection">
+                                    <span class="questionnumberspan ques-inlineblock">2</span>
+                                    <p class="paraquestionsection ques-inlineblock">
+                                        Describe what it means <br class="que-brmobileview">to be part of Croma       
+                                    </p>
+                                </div>
+                            </label>
+                            <textarea name="firstquestion" id="secondquestion" cols="30" rows="8" maxlength="280" placeholder="Type your description hear  (280 characters)" ></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+                <div class="question-laststepsection4 fullheight">
+                    <button class="question-section" type="submit">Finish</button>
+                </div>
+            </form>
+
+        
+
+
+  
+        </div>
+        </div>
+
+    </section>
+
+    <script>
+        
+        const FirstQ = document.querySelector("#firstquestion");
+        const SecondQ = document.querySelector("#secondquestion");
+
+        console.log(FirstQ);
+        console.log(SecondQ);
+
+        function validation () {
+            if (FirstQ.value == "" && SecondQ == ""){
+
+                alert("both question are Empty");
+            }
+            console.log(location.href);
+            location.href = "http://127.0.0.1:5500/Questionsubmission.html/";
+            console.log(location.href);
+            return true;
+        }
+
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

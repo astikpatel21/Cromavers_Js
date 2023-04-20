@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/lastpage.css">
+    <!-- <link rel="stylesheet" href="../css/eventDetalis.css">
+    <link rel="stylesheet" href="../css/faq.css">
+    <link rel="stylesheet" href="../css/hearFromYou.css">
+    <link rel="stylesheet" href="../css/here-from-you-page.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/otp.css">
+    <link rel="stylesheet" href="../css/otpVerification.css">
+    <link rel="stylesheet" href="../css/profile-info.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/thankYou.css"> -->
+
+</head>
+<body>
+    <section class="last-mainsection">
+        
+        <div class="last-responsivediv2 last-maindiv">
+            <div class="last-subgrid">
+                <div class="div-floating">Event Details page
+
+                </div>
+                <img src="../img/logowebsitemain.png" alt="main logo" height="100" width="auto">
+                <!-- <h1>all about</h1> -->
+                <p class="last-mainpara last-boldtext">ANNUAL CONFERENCE, 2023</p>
+                <p class="last-mainpara last-thintext">PEOPLE .PURPOSE .Passion</p>
+                <div class="title hide" id="end-date" style="display:none" >20 March 2024 10:00 PM</div>
+                <div class="col last-col-grid">
+                    <div class="area1 area">
+                        <input class="timenumber" type="text" readonly value="0">
+                        <br/>
+                        <label for="">Days</label>
+                    </div>
+                    <div class="area2 area">
+                        <input class="timenumber" type="text" readonly value="0">
+                        <br/>
+                        <label for="">Hours</label>
+                    </div>
+                    <div class="area3 area">
+                        <input class="timenumber" type="text" readonly value="0">
+                        <br/>
+                        <label for="">Minutes</label>
+                    </div>
+                    <div class="area4 area">
+                        <input class="timenumber" type="text" readonly value="0">
+                        <br/>
+                        <label for="">Seconds</label>
+                    </div>
+                </div>
+                                <!-- <div class="emailform">
+                                    <label for="emailid" class="mainlable">Enter your email address
+                                    </label><br>
+                                    <input type="text" name="mailid" id="emailid" placeholder="sample@croma.com">
+                                    <button type="submit">Ragister </button>
+                                </div>
+                                <p class="footerpara">If you are alrady, pleasr <a href="#" target="_blank" rel="noopener noreferrer">click hear to login</a></p> -->
+            </div>
+        </div>
+
+        <div class="last-responsivediv3 last-hiddendiv">
+            <div class="firstsidbarsection ">
+    
+                <div class="firstsidebarsection1 fullheight">
+                    <p class="title">Dates & Details</p>
+                    <h3 class="dateheading"> <time>2<sup>nd</sup> April 2023</time></h3>
+                    <p class="subdecription"> Arrivals and check-in <br> (15:00 hrs onwards)</p>
+                </div>
+                <div class="firstsidebarsection2 fullheight">
+                    <h3 class="dateheading"> <time>3<sup>rd</sup> April 2023</time></h3>
+                    <p class="subdecription"> Conference Day-1</p>
+                </div>
+                
+                <div class="firstsidebarsection3 fullheight">
+                <h3 class="dateheading"> <time>2<sup>nd</sup> April 2023</time></h3>
+                <p class="subdecription"> Conference Day-1 <br> & departure post lunch</p>
+                </div>
+            
+            </div>
+            
+            <div class="secondsidbarsection">
+                <div class="secondsidbarsection1 fullheight">
+                <p class="title">venue</p>
+                <h3 class="dateheading"> The Westin</h3>
+                <p class="subdecription"> Mumbai Powal Lake <br> <br>
+                <a class="alink" href="#" target="_blank" rel="noopener noreferrer">Google maps link</a></p>
+                </div>
+            
+                <div class="secondsidbarsection2 fullheight margin-top-8">
+                <p class="title">Dress Code</p>
+                <h3 class="sideheading"> Business Casuals</h3>
+                </div>
+            </div>
+            
+            <div class="beloWfullsection">
+                    <div class="beloWfullsection1 fullheight">
+                            <p class="subdecription"> in case of any queries</p>
+                            <p></p><a class="alink bigfont" href="mailto:cromaverse@croma.com" target="_blank" rel="noopener noreferrer">cromaverse@croma.com</a></p>
+                    </div>
+            
+                    <div class="beloWfullsection2 fullheight">
+                            <button class="belowsection" type="submit">view FAQs </button>
+                    </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        const endDate = "27 march 2024  08:20:00 PM"
+
+        document.getElementById("end-date").innerText = endDate;
+        const inputs = document.querySelectorAll("input");
+        console.log(endDate);
+        console.log(inputs);
+    // const clock = () => {
+
+    // }
+
+        function clock() {
+            const end = new Date(endDate)
+            const now = new Date()
+            const diff = (end - now) / 1000;
+
+            if (diff < 0) return;
+
+            // convert into days;
+            inputs[0].value = Math.floor(diff / 3600 / 24);
+            inputs[1].value = Math.floor(diff / 3600) % 24;
+            inputs[2].value = Math.floor(diff / 60) % 60;
+            inputs[3].value = Math.floor(diff) % 60;
+        }
+
+// initial call
+        clock();
+
+/**
+ *  1 day = 24 hrs
+ *  1 hr = 60 mins
+ *  60 min = 3600 sec
+ */
+
+        setInterval(
+            () => {
+                clock()
+            },
+            1000
+        )
+    </script>
+
+
+</body>
+</html>
+
+

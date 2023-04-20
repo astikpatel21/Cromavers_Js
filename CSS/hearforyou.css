@@ -1,0 +1,861 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+:root {
+    --main-color : #fff;
+    --btn: #3abb9d;
+    --btn-hover: #00ffc3;
+    --xs-small1-2: 1rem;
+    --small1-2: 1.2rem;
+    --medium1-5: 1.5rem;
+    --large1-7: 1.7rem;
+    --x-large1-8: 1.8rem;
+    --xx-large2-1: 2.1rem;
+    --xxx-large2-4: 2.4rem;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.hearformyoup-mainsection{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(66.66%,2fr) minmax(33.33%,1fr);
+    grid-template-areas: "hearformyoup-responsivediv3 hearformyoup-responsivediv2";
+    align-items: center;
+    background-image: url("../img/aurora.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center ;
+    /* height: 100vh;
+    width: 100vw; */
+    overflow: hidden;
+    overflow-y: auto;
+
+
+}
+.hearformyoup-responsivediv2{
+    grid-area: hearformyoup-responsivediv2 ;
+    height: 100%;
+    
+}
+.hearformyoup-responsivediv3{
+    grid-area: hearformyoup-responsivediv3 ;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100vh;
+}
+.hearformyoup-maindiv{
+    height: 100%;
+    padding:0 10% 0 10%;    
+}
+.hearformyoup-mainpara{
+    font-size: var(--small1-2);
+    margin: 5px;
+    color: #fff;
+    margin-top: 8%;
+}
+
+.hearformyoup-maindiv img{    
+    margin-top: 15% ;
+}
+
+
+.hear-positionrightbuttom{
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    font-size: var(--xx-large2-1);
+    font-weight: 800;
+    padding: 15px;
+    border-radius: 0 2px 2px 0;
+    opacity: 0.8;
+}
+.hearformyoup-responsivediv3{
+    
+    padding-left: 10%;
+}
+.hearformyoup-responsivediv3{
+    /* display: grid; */
+    /* grid-template-rows: minmax(50%,1fr) minmax(20%,0.2fr) minmax(20%,0.2fr) minmax(10%,0.2fr) ;
+    grid-area: "hearforyoup-sub-sec1"
+    "hearforyoup-sub-sec2"
+    "hearforyoup-sub-sec3"
+    "hearforyoup-sub-sec4" ; */
+    height: 100%;
+}
+.hearforyoup-sub-sec1{
+    grid-template-areas: hearforyoup-sub-sec1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: "hear-mainheading imagehearavatar";
+justify-items: flex-start;
+
+}
+.hearforyoup-sub-sec2{
+    grid-template-areas: hearforyoup-sub-sec2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: "hear-mobilenumber hear-covid19";
+    margin-top: 5%;
+}
+.hearforyoup-sub-sec3{
+    grid-template-areas: hearforyoup-sub-sec3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: "hear-diatery hear-id-proof";
+    margin-top: 3%;
+    
+}
+.hearforyoup-sub-sec4{
+    grid-template-areas: hearforyoup-sub-sec4;
+    margin-top: 7%;
+}
+.hear-mainheading{
+    grid-template-areas: hear-mainheading;
+}
+.imagehearavatar{
+    grid-template-areas: imagehearavatar;
+    margin-top: 7%;
+}
+.hear-mobilenumber{
+    grid-template-areas: hear-mobilenumber;
+}
+.hear-covid19{
+    grid-template-areas: hear-covid19;
+}
+.hear-diatery{
+    grid-template-areas: hear-diatery;
+}
+.hear-id-proof{
+    grid-template-areas: hear-id-proof;
+}
+
+
+/* image avatar */
+#image-avtar {
+    display: none;
+  }
+
+.divimage-avtar{
+    padding: 50px 30px;
+    margin: 10px;
+    background: #00000080;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+} 
+
+.divimage-avtar p{
+    margin-top: 15px;
+    font-size: var(--x-large1-8);
+    color: var(--main-color);
+    font-weight: 900;
+    text-align: center;
+} 
+
+.paraimage-avtar{
+    padding: 15px;
+    color: var(--main-color);
+    font-size: 1rem;
+    font-weight: 100;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+
+.hear-mainheading{
+    color: var(--main-color);
+    padding-top: 20%;
+
+}
+.hear-para{
+    font-size: var(--small1-2);
+}
+.hear-boldfont{
+    font-weight: 800;
+}
+.here-mainheading{
+    font-size: 3.2rem;
+    padding-bottom: 3%;
+}
+.hearformheading{
+    color: var(--main-color);
+    font-size: var(--medium1-5);
+    display: block;
+    margin-top: 5%;
+}
+#hearnobilenumber{
+    background: #00000080 ;
+    border: none;
+    outline: none;
+    margin-top: 2%;
+    width: 80%;
+    padding: 19px;
+    border-radius: 5px;
+    font-size: var(--large1-7);
+    color: var(--main-color);
+    /* padding-top: 2%; */
+
+}
+.hear-drawselectfilesection{
+    display: flex;
+    background: #00000080 ;
+    border: none;
+    outline: none;
+    margin-top: 2%;
+    width: 80%;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: var(--large1-7);
+    color: var(--main-color);
+    cursor: pointer;
+    flex-direction: row;
+    align-items: center;
+}
+.hearcovid19drawpara{
+    display: flex;
+    width: 90%;
+}
+.heararow{
+    font-size: 3rem;
+}
+#hearcovid19, #hearidprof{
+    display: none;
+}
+.hearcomanparafooter{
+    color: var(--main-color);
+    font-size: var(--xs-small1-2);
+    padding-top: 5px;
+}
+#hear-diatery {
+  width: 80%;
+  font-size: var(--xx-large2-1);
+  background: #0008;
+  color: var(--main-color);
+  border: none;
+  padding: 16px;
+  border-radius: 5px;
+  margin-top: 2%;
+}
+
+
+/*  */
+button.hearbutton-section{
+    display: block;
+    text-align: left;
+    margin: 2% 0 5% 0;
+    padding: 15px 30px;
+    background-color: var(--btn);
+    border: none;
+    border-radius: 5px;
+    font-size: var(--medium1-5);
+    font-weight: 900;
+}
+button.hearbutton-section:hover{ 
+    background-color: var(--btn-hover);
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+small.errorinput{
+    display: block;
+    font-size: 1.5rem;
+    color: #fa4646;
+    font-weight: 900;
+}
+
+
+@media screen and (max-width:1200px)  and (orientation : Portrait) {
+
+
+    .hearformyoup-subgrid  img:first-child {
+        height: 70px;
+        width: auto;
+    }
+    .hear-brmobileview{
+        display:none;
+    }
+
+
+}
+
+@media screen and (max-width:1100px)  and (orientation : Portrait) {
+
+    
+    .hear-brmobileview{
+        display:none;
+    }
+    .hearformyoup-responsivediv3{
+        grid-area: hearformyoup-responsivediv3 ;
+        background-color: rgba(0, 0, 0, 0.3);
+        height: auto;
+    }
+    
+
+
+}
+
+
+@media screen and (max-width:920px)  and (orientation : Portrait) {
+
+    .hearformyoup-subgrid  img:first-child {
+        height: 100px;
+        width: auto;
+    }
+    
+    .hearformyoup-mainsection{
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:minmax(50%,1fr) minmax(100%,2fr) ;
+        grid-template-areas: "hearformyoup-responsivediv2" 
+                            "hearformyoup-responsivediv3";
+        align-items: center;
+        background-image: url("../img/aurora.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    .hearformyoup-responsivediv3{
+        grid-area: hearformyoup-responsivediv3 ;
+        background-color: rgba(0, 0, 0, 0.3);
+        height: auto;
+    }
+
+    
+    .hearformyoup-subgrid  img:last-child {
+        display: none;
+        height: 60px;
+        width: auto;
+    }
+
+
+    .hearforyoup-sub-sec1{
+    grid-template-areas: hearforyoup-sub-sec1;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-area: "hear-mainheading imagehearavatar";
+justify-items: flex-start;
+}
+.hearforyoup-sub-sec2{
+    grid-template-areas: hearforyoup-sub-sec2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: "hear-mobilenumber" "hear-covid19";
+    margin-top: 5%;
+}
+.hearforyoup-sub-sec3{
+    grid-template-areas: hearforyoup-sub-sec3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: "hear-diatery" "hear-id-proof";
+    margin-top: 3%;
+    
+}
+
+   
+
+}
+
+@media screen and (max-width:650px) and (orientation : Portrait) {
+
+    
+    .hearformyoup-subgrid  img:first-child {
+        height: 70px;
+        width: auto;
+    }
+    
+    .hearformyoup-mainsection{
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:minmax(100%,1fr) minmax(100%,2fr) ;
+        grid-template-areas: "hearformyoup-responsivediv2" 
+                            "hearformyoup-responsivediv3";
+        align-items: center;
+        background-image: url("../img/aurora.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center ;
+        /* height: 100vh;
+        width: 100vw; */
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .hearformyoup-responsivediv3{
+        grid-area: hearformyoup-responsivediv3 ;
+        background-color: rgba(0, 0, 0, 0.3);
+        height: auto;
+    }
+    
+    
+    
+    /*  */
+    button.hearbutton-section{
+        font-size: var(--small1-2);
+       
+    }
+
+
+
+        .hearforyoup-sub-sec1{
+    grid-template-areas: hearforyoup-sub-sec1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: "hear-mainheading" "imagehearavatar";
+justify-items: flex-start;
+
+}
+.hearforyoup-sub-sec2{
+    grid-template-areas: hearforyoup-sub-sec2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: "hear-mobilenumber" "hear-covid19";
+    margin-top: 5%;
+}
+.hearforyoup-sub-sec3{
+    grid-template-areas: hearforyoup-sub-sec3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: "hear-diatery" "hear-id-proof";
+    margin-top: 3%;
+    
+}
+
+
+
+
+.divimage-avtar{
+    padding: 50px 30px;
+    margin: 10px;
+    
+    border-radius: 25px;
+    
+} 
+
+.divimage-avtar p{
+    margin-top: 15px;
+    font-size: var(--x-large1-8);
+  
+ 
+ 
+} 
+
+.paraimage-avtar{
+    padding: 15px;
+    color: var(--main-color);
+    font-size: 1rem;
+
+}
+
+
+
+.hear-mainheading{
+    color: var(--main-color);
+    padding-top: 20%;
+
+}
+.hear-para{
+    font-size: var(--small1-2);
+}
+
+.here-mainheading{
+    font-size: 3.2rem;
+    padding-bottom: 3%;
+}
+.hearformheading{
+    color: var(--main-color);
+    font-size: var(--medium1-5);
+    margin-top: 5%;
+}
+#hearnobilenumber{
+    background: #00000080 ;
+    border: none;
+    outline: none;
+    margin-top: 2%;
+    width: 90%;
+    padding: 19px;
+    border-radius: 5px;
+    font-size: var(--large1-7);
+    color: var(--main-color);
+    /* padding-top: 2%; */
+
+}
+.hear-drawselectfilesection{
+    display: flex;
+    background: #00000080 ;
+    border: none;
+    outline: none;
+    margin-top: 2%;
+    width: 90%;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: var(--medium1-5);
+    color: var(--main-color);
+    cursor: pointer;
+    flex-direction: row;
+    align-items: center;
+}
+.hearcovid19drawpara{
+    display: flex;
+    width: 90%;
+}
+.heararow{
+    font-size: 2.5rem;
+}
+#hearcovid19, #hearidprof{
+    display: none;
+}
+.hearcomanparafooter{
+    color: var(--main-color);
+    font-size: 1rem;
+    padding-top: 5px;
+}
+#hear-diatery {
+  width: 90%;
+  font-size: var(--large1-7);
+  background: #0008;
+  color: var(--main-color);
+  border: none;
+  padding: 16px;
+  border-radius: 5px;
+  margin-top: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width:1200px)  and (orientation : landscape) {
+
+
+    .hearformyoup-subgrid  img:first-child {
+        height: 70px;
+        width: auto;
+    }
+    .hear-brmobileview{
+        display:none;
+    }
+
+
+}
+
+@media screen and (max-width:1100px)  and (orientation : landscape) {
+
+    
+    .hear-brmobileview{
+        display:none;
+    }
+    .hearformyoup-responsivediv3{
+        grid-area: hearformyoup-responsivediv3 ;
+        background-color: rgba(0, 0, 0, 0.3);
+        height: auto;
+    }
+    
+
+
+}
+
+
+@media screen and (max-width:920px)  and (orientation : landscape) {
+
+    .hearformyoup-subgrid  img:first-child {
+        height: 100px;
+        width: auto;
+    }
+    
+    .hearformyoup-mainsection{
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:minmax(50%,1fr) minmax(100%,2fr) ;
+        grid-template-areas: "hearformyoup-responsivediv2" 
+                            "hearformyoup-responsivediv3";
+        align-items: center;
+        background-image: url("../img/aurora.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .hearformyoup-responsivediv3{
+        grid-area: hearformyoup-responsivediv3 ;
+        background-color: rgba(0, 0, 0, 0.3);
+        height: auto;
+    }
+
+    
+    .hearformyoup-subgrid  img:last-child {
+        display: none;
+        height: 60px;
+        width: auto;
+    }
+
+
+    .hearforyoup-sub-sec1{
+    grid-template-areas: hearforyoup-sub-sec1;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-area: "hear-mainheading imagehearavatar";
+justify-items: flex-start;
+}
+.hearforyoup-sub-sec2{
+    grid-template-areas: hearforyoup-sub-sec2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: "hear-mobilenumber" "hear-covid19";
+    margin-top: 5%;
+}
+.hearforyoup-sub-sec3{
+    grid-template-areas: hearforyoup-sub-sec3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: "hear-diatery" "hear-id-proof";
+    margin-top: 3%;
+    
+}
+
+   
+
+}
+
+@media screen and (max-width:650px) and (orientation : landscape) {
+
+    
+    .hearformyoup-subgrid  img:first-child {
+        height: 70px;
+        width: auto;
+    }
+    
+    .hearformyoup-mainsection{
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:minmax(100%,1fr) minmax(100%,2fr) ;
+        grid-template-areas: "hearformyoup-responsivediv2" 
+                            "hearformyoup-responsivediv3";
+        align-items: center;
+        background-image: url("../img/aurora.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center ;
+        /* height: 100vh;
+        width: 100vw; */
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .hearformyoup-responsivediv3{
+        grid-area: hearformyoup-responsivediv3 ;
+        background-color: rgba(0, 0, 0, 0.3);
+        height: auto;
+    }
+
+    
+    
+    
+    /*  */
+    button.hearbutton-section{
+        font-size: var(--small1-2);
+       
+    }
+
+
+
+        .hearforyoup-sub-sec1{
+    grid-template-areas: hearforyoup-sub-sec1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: "hear-mainheading" "imagehearavatar";
+justify-items: flex-start;
+
+}
+.hearforyoup-sub-sec2{
+    grid-template-areas: hearforyoup-sub-sec2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: "hear-mobilenumber" "hear-covid19";
+    margin-top: 5%;
+}
+.hearforyoup-sub-sec3{
+    grid-template-areas: hearforyoup-sub-sec3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: "hear-diatery" "hear-id-proof";
+    margin-top: 3%;
+    
+}
+
+
+
+
+.divimage-avtar{
+    padding: 50px 30px;
+    margin: 10px;
+    
+    border-radius: 25px;
+    
+} 
+
+.divimage-avtar p{
+    margin-top: 15px;
+    font-size: var(--x-large1-8);
+  
+ 
+ 
+} 
+
+.paraimage-avtar{
+    padding: 15px;
+    color: var(--main-color);
+    font-size: 1rem;
+
+}
+
+
+
+.hear-mainheading{
+    color: var(--main-color);
+    padding-top: 20%;
+
+}
+.hear-para{
+    font-size: var(--small1-2);
+}
+
+.here-mainheading{
+    font-size: 3.2rem;
+    padding-bottom: 3%;
+}
+.hearformheading{
+    color: var(--main-color);
+    font-size: var(--medium1-5);
+    margin-top: 5%;
+}
+#hearnobilenumber{
+    background: #00000080 ;
+    border: none;
+    outline: none;
+    margin-top: 2%;
+    width: 90%;
+    padding: 19px;
+    border-radius: 5px;
+    font-size: var(--large1-7);
+    color: var(--main-color);
+    /* padding-top: 2%; */
+
+}
+.hear-drawselectfilesection{
+    display: flex;
+    background: #00000080 ;
+    border: none;
+    outline: none;
+    margin-top: 2%;
+    width: 90%;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: var(--medium1-5);
+    color: var(--main-color);
+    cursor: pointer;
+    flex-direction: row;
+    align-items: center;
+}
+.hearcovid19drawpara{
+    display: flex;
+    width: 90%;
+}
+.heararow{
+    font-size: 2.5rem;
+}
+#hearcovid19, #hearidprof{
+    display: none;
+}
+.hearcomanparafooter{
+    color: var(--main-color);
+    font-size: 1rem;
+    padding-top: 5px;
+}
+#hear-diatery {
+  width: 90%;
+  font-size: var(--large1-7);
+  background: #0008;
+  color: var(--main-color);
+  border: none;
+  padding: 16px;
+  border-radius: 5px;
+  margin-top: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+

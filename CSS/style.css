@@ -1,0 +1,842 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+:root {
+    --main-color : #fff;
+    --btn: #3abb9d;
+    --btn-hover: #00ffc3;
+    --small1-2: 1.2rem;
+    --medium1-5: 1.5rem;
+    --large1-7: 1.7rem;
+    --x-large1-8: 1.8rem;
+    --xx-large2-1: 2.1rem;
+    --xxx-large2-4: 2.4rem;
+}
+
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+.mainsection{
+    height: 100%;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 0.3fr;
+    grid-template-areas: "responsivediv1 responsivediv2  responsivediv3 ";
+    align-items: center;
+    background-image: url("/img/aurora.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center ;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    overflow-y: auto;
+    /* background-image: url("/img/aurora.jpg"); */
+}
+.responsivediv1{
+    grid-area: responsivediv1 ;
+}
+.responsivediv2{
+    grid-area: responsivediv2 ;
+    width: 100%;
+    height: 100%;
+}
+.responsivediv3{
+    grid-area: responsivediv3 ;
+}
+
+.maindiv{
+    /* display: grid; */
+    /* align-items: center; */
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    padding:0 20% 0 20%;
+    /* text-align: center; */
+    justify-items: center;
+    
+}
+
+
+.maindiv img{
+    /* align-self: self-start; */
+    margin-top: 15% ;
+}
+.maindiv h1{
+    /* align-self:flex-start; */
+    margin-top: 3% ;
+}
+
+
+.mainpara{
+    font-size: var(--xx-large2-1);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin: 5px;
+    color: #fff;
+    
+
+}
+
+p.boldtext{
+    margin-top: 8%;
+    font-weight: 900;
+}
+
+p.thintext{
+    margin-top: 3%;
+    font-weight: 100;
+    margin-bottom: 10%;
+}
+
+
+.mainlable{
+    display: block;
+    font-size: 1.2rem;
+    text-align: left ;
+    /* margin-left: 10px; */
+    /* padding-left: 10px; */
+    /* padding-top: 30%; */
+    margin-top: 15%;
+    color: #fff;
+}
+
+input{
+    display: block;
+    width: 100%;
+    text-align: left ;
+    padding: 15px 10px 15px 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.8rem;
+    outline: none;
+    font-weight: 700;
+}
+
+button{
+    display: block;
+    text-align: left;
+    margin-top: 10%;
+    padding: 15px 30px;
+    background-color: var(--btn);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+
+
+button:hover{
+    
+    background-color: var(--btn-hover);
+    
+
+}
+
+.margin-top-25{
+    margin-top: 25%;
+}
+.footerpara{
+    vertical-align: bottom;
+
+    margin-bottom: 5%;
+    padding-bottom: 15px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+
+.footerpara a{
+    color: #fbf9f9;
+}
+
+.responsivediv{
+    position: relative;
+}
+.position-image {
+    position:fixed;
+    bottom: 0px;
+    right: 16px;
+
+}
+.mainsection-position-image{
+    display: none;
+}
+.fontdecornone{
+    text-decoration: none;
+}
+.fontdecornone:hover , a:hover{
+    text-decoration: underline;
+    color: var(--btn);
+}
+
+
+@media screen and (max-width:1300px)  and (orientation : Portrait) {
+
+    .submaindiv img{
+        height: 80px;
+        width: auto;
+
+    }
+
+    .mainpara{
+        font-size: var(--x-large1-8);
+    }
+
+
+}
+
+
+
+
+
+@media screen and (max-width:1100px)  and (orientation : Portrait) {
+
+    body{
+        background-image: none;
+        /* background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center ;
+        height: 150vh;
+        width: 100%; */
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* overflow: hidden; */
+        /* height: 100vh; */
+    }
+
+
+    .mainsection{
+        grid-template-columns: 0 1fr 0;
+        grid-template-areas: "responsivediv1 responsivediv2  responsivediv3 ";
+        /* padding:10px; */
+        overflow: hidden;
+        overflow-y: auto;
+        background-image: url(/img/aurora.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center ;
+        background-color: rgba(0, 0, 0, 0.3);
+        height: 100vh;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .submaindiv img{
+        height: 100px;
+        width: auto;
+
+    }
+    
+    .hiddendiv{
+        display: none;
+    }
+
+    .maindiv{
+        text-align: center;
+        overflow-x: auto;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .emailform{
+        display: grid;
+        justify-content: center;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-auto-flow: row;
+        justify-items: center;
+
+    }
+    .mainpara {
+        font-size: var(--xxx-large2-4);
+    }
+    .mainlable {
+        text-align: center;
+        font-size: 1.8rem;
+        
+    }
+    input{
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 15px 60px 15px 60px;
+        font-size: var(--xx-large2-1);
+    }
+    button{
+        display: block;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    .footerpara{
+        font-size: 1.5rem;
+    }
+    
+   
+
+}
+
+
+@media screen and (max-width:920px)  and (orientation : Portrait) {
+
+    body{
+        background-image: none;
+        /* background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center ;
+        height: 150vh;
+        width: 100%; */
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    
+
+    .mainsection{
+        grid-template-columns: 0 1fr 0;
+        grid-template-areas: "responsivediv1 responsivediv2  responsivediv3 ";
+        /* padding:10px; */
+        overflow: hidden;
+        overflow-y: auto;
+        background-image: url(/img/aurora.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center ;
+        background-color: rgba(0, 0, 0, 0.3);
+        height: 100vh;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    
+    .hiddendiv{
+        display: none;
+    }
+    .submaindiv img{
+        height: 80px;
+        width: auto;
+
+    }
+
+    .maindiv{
+        text-align: center;
+           overflow-x: auto;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .emailform{
+        /* display: grid; */
+        justify-content: center;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-auto-flow: row;
+        justify-items: center;
+
+    }
+    .mainpara {
+        font-size: 2rem;
+    }
+    .mainlable {
+        text-align: center;
+        font-size: 1.5rem;
+        
+    }
+    input{
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 15px 40px 15px 40px;
+        font-size: var(--x-large1-8);
+    }
+    button{
+        display: block;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .footerpara{
+        font-size: 1.3rem;
+    }
+    
+   
+
+}
+
+@media screen and (max-width:650px) and (orientation : Portrait) {
+
+    body{
+        background-image: none;
+        /* background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center ;
+        height: 150vh;
+        width: 100%; */
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    
+
+    .mainsection{
+        grid-template-columns: 0 1fr 0;
+        grid-template-areas: "responsivediv1 responsivediv2  responsivediv3 ";
+        /* padding:10px; */
+        overflow: hidden;
+        overflow-y: auto;
+        background-image: url(/img/aurora.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center ;
+        background-color: rgba(0, 0, 0, 0.3);
+        height: 100vh;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    
+    .hiddendiv{
+        display: none;
+    }
+
+    .maindiv{
+        text-align: center;
+           overflow-x: auto;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .emailform{
+        /* display: grid; */
+        justify-content: center;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-auto-flow: row;
+        justify-items: center;
+
+    }
+    .mainpara {
+        font-size: 1.8rem;
+    }
+    .mainlable {
+        text-align: center;
+        font-size: 1.3rem;
+        
+    }
+    input{
+        display: block;
+        text-align: center;
+        width: 90%;
+        padding: 15px 40px 15px 40px;
+        font-size: var(--large1-7);
+    }
+    button{
+        display: block;
+        text-align: center;
+        font-size: 1.3rem;
+    }
+    .footerpara{
+        font-size: 1.2rem;
+    }
+    
+
+
+}
+
+
+@media screen and (max-width:350px) and (orientation : Portrait) {
+
+    .submaindiv img{
+        height: 50px;
+        width: auto;
+
+    }
+
+    .mainpara {
+        font-size: 1.5rem;
+    }
+    .mainlable {
+        text-align: center;
+        font-size: 1.2rem;
+        
+    }
+    input{
+        display: block;
+        text-align: center;
+        width: 90%;
+        padding: 15px 40px 15px 40px;
+        font-size: var(--large1-7);
+    }
+    button{
+        display: block;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    .footerpara{
+        font-size: 1.1rem;
+    }
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1300px)  and (orientation : Landscape) {
+
+    .submaindiv img{
+        height: 80px;
+        width: auto;
+
+    }
+
+    .mainpara{
+        font-size: var(--x-large1-8);
+    }
+
+
+}
+
+
+
+
+
+@media screen and (max-width:1100px)  and (orientation : Landscape) {
+
+    body{
+        background-image: none;
+        /* background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center ;
+        height: 150vh;
+        width: 100%; */
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* overflow: hidden; */
+        /* height: 100vh; */
+    }
+
+
+    .mainsection{
+        grid-template-columns: 0 1fr 0;
+        grid-template-areas: "responsivediv1 responsivediv2  responsivediv3 ";
+        /* padding:10px; */
+        overflow: hidden;
+        overflow-y: auto;
+        background-image: url(/img/aurora.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center ;
+        background-color: rgba(0, 0, 0, 0.3);
+        height: 100vh;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .submaindiv img{
+        height: 100px;
+        width: auto;
+
+    }
+    
+    .hiddendiv{
+        display: none;
+    }
+
+    .maindiv{
+        text-align: center;
+        overflow-x: auto;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .emailform{
+        display: grid;
+        justify-content: center;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-auto-flow: row;
+        justify-items: center;
+
+    }
+    .mainpara {
+        font-size: var(--xxx-large2-4);
+    }
+    .mainlable {
+        text-align: center;
+        font-size: 1.8rem;
+        
+    }
+    input{
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 15px 60px 15px 60px;
+        font-size: var(--xx-large2-1);
+    }
+    button{
+        display: block;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    .footerpara{
+        font-size: 1.5rem;
+    }
+    
+   
+
+}
+
+
+@media screen and (max-width:920px)  and (orientation : Landscape) {
+
+    body{
+        background-image: none;
+        /* background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center ;
+        height: 150vh;
+        width: 100%; */
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    
+
+    .mainsection{
+        grid-template-columns: 0 1fr 0;
+        grid-template-areas: "responsivediv1 responsivediv2  responsivediv3 ";
+        /* padding:10px; */
+        overflow: hidden;
+        overflow-y: auto;
+        background-image: url(/img/aurora.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center ;
+        background-color: rgba(0, 0, 0, 0.3);
+        height: 100vh;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    
+    .hiddendiv{
+        display: none;
+    }
+    .submaindiv img{
+        height: 80px;
+        width: auto;
+
+    }
+
+    .maindiv{
+        text-align: center;
+           overflow-x: auto;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .emailform{
+        /* display: grid; */
+        justify-content: center;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-auto-flow: row;
+        justify-items: center;
+
+    }
+    .mainpara {
+        font-size: 2rem;
+    }
+    .mainlable {
+        text-align: center;
+        font-size: 1.5rem;
+        
+    }
+    input{
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 15px 40px 15px 40px;
+        font-size: var(--x-large1-8);
+    }
+    button{
+        display: block;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .footerpara{
+        font-size: 1.3rem;
+    }
+    
+   
+
+}
+
+@media screen and (max-width:650px) and (orientation : Landscape) {
+
+    body{
+        background-image: none;
+        /* background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center ;
+        height: 150vh;
+        width: 100%; */
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    
+
+    .mainsection{
+        grid-template-columns: 0 1fr 0;
+        grid-template-areas: "responsivediv1 responsivediv2  responsivediv3 ";
+        /* padding:10px; */
+        overflow: hidden;
+        overflow-y: auto;
+        background-image: url(/img/aurora.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center ;
+        background-color: rgba(0, 0, 0, 0.3);
+        height: 100vh;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    
+    .hiddendiv{
+        display: none;
+    }
+
+    .maindiv{
+        text-align: center;
+           overflow-x: auto;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .emailform{
+        /* display: grid; */
+        justify-content: center;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-auto-flow: row;
+        justify-items: center;
+
+    }
+    .mainpara {
+        font-size: 1.8rem;
+    }
+    .mainlable {
+        text-align: center;
+        font-size: 1.3rem;
+        
+    }
+    input{
+        display: block;
+        text-align: center;
+        width: 90%;
+        padding: 15px 40px 15px 40px;
+        font-size: var(--large1-7);
+    }
+    button{
+        display: block;
+        text-align: center;
+        font-size: 1.3rem;
+    }
+    .footerpara{
+        font-size: 1.2rem;
+    }
+    
+
+
+}
+
+
+@media screen and (max-width:350px) and (orientation : Landscape) {
+
+    .submaindiv img{
+        height: 50px;
+        width: auto;
+
+    }
+
+    .mainpara {
+        font-size: 1.5rem;
+    }
+    .mainlable {
+        text-align: center;
+        font-size: 1.2rem;
+        
+    }
+    input{
+        display: block;
+        text-align: center;
+        width: 90%;
+        padding: 15px 40px 15px 40px;
+        font-size: var(--large1-7);
+    }
+    button{
+        display: block;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    .footerpara{
+        font-size: 1.1rem;
+    }
+    
+
+}
+
+
+small.error-message{
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 900;
+    margin-top: 1rem;
+}

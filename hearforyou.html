@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/hearforyou.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <section class="hearformyoup-mainsection">
+        <!-- <video src="../img/video.mp4" loop muted play-inline autoplay class="back-video">
+            
+        </video> -->
+        
+        
+        <div class="hearformyoup-responsivediv2 hearformyoup-maindiv">
+            <div class="hearformyoup-subgrid">
+                <img src="../img/logowebsitemain.png" alt="main logo" height="80" width="auto">
+                <p class="hearformyoup-mainpara">
+        Croma’s journey is one of constant <br class="hear-brmobileview">
+        innovation and exploration. And <br class="hear-brmobileview">
+        Cromaverse reflects its values and growth, <br class="hear-brmobileview">
+        mirroring an ever-expanding universe. <br><br>
+        
+        It is an opportunity for us to bring<br class="hear-brmobileview">
+        together our brightest minds, and to share<br class="hear-brmobileview">
+        learnings and new experiences, while<br class="hear-brmobileview">
+        honouring those who have helped shape<br class="hear-brmobileview">
+        Croma into the force it is today.<br class="hear-brmobileview">
+
+                </p>
+                <img class="hear-positionrightbuttom" src="../img/Screenshot_2023-03-14_131633-removebg-preview.png" alt="" height="175" width="auto">
+                
+            </div>
+        </div>
+
+        <div class="hearformyoup-responsivediv3 hearformyoup-hiddendiv">
+            
+            
+            
+            <form id="hearfromyouForm" >
+
+                <div class="hearforyoup-sub-sec1">
+                    <div class="hear-mainheading">
+                        <p class="hear-para hear-normalfont">Glad to have you onboard</p>
+                        <h2 class="here-mainheading">Prachi Gupta</h2>
+                        <p class="hear-para hear-boldfont">Brand Marketing</p>
+                    </div>
+
+                    <div class="imagehearavatar">
+                        <label for="image-avtar">
+                            <div class="divimage-avtar" id="avtarImageUpload">
+                                <img src="../img/smile-icon.png" alt="" width="50">
+                                <p>Upload Profile<br> Picture</p>
+                            </div>
+                            <p class="paraimage-avtar hearcomanparafooter">
+                                JPEG formate <br> minimum resolution is <br>300 X 300 pixels.
+                            </p>
+                        </label>
+                        <input onchange="return validateavtar()" type="file" name="image-avtar" id="image-avtar" accept="image/png, image/jpeg">
+                    </div>
+                </div>
+
+
+                <div class="hearforyoup-sub-sec2">
+                    <div class="hear-mobilenumber">
+                        <label for="hearnobilenumber" class="hearformheading">Mobile Number*</label>
+                        <input onkeyup="return NumberValidation(this)"  type="tel" name="MobileNumber" id="hearnobilenumber" maxlength="10" pattern="[0-9]{10}">
+                        <small class="errorinput"></small>
+                    </div>
+                    <div class="hear-covid19">
+                        <label for="hearcovid19" class="hearformheading">COVID-19 Vaccination Certificate*</label>
+                        <label for="hearcovid19" class="hear-drawselectfilesection"> 
+                            <p class="hearcovid19drawpara ">
+                                Select File <p class="heararow">&#62;</p>
+                            </p>
+                        </label>
+                        <input  onchange="return validateCOVID()" type="file" name="image-avtar" id="hearcovid19" accept="image/png, image/jpeg">
+                        <label for="hearcovid19"> 
+                            <p class="hearcovid19para hearcomanparafooter">
+                                JPEG / PDF format (Minimum 2nd Dose is Mandatory)
+                            </p>
+                        </label>
+
+                    </div>
+                </div>
+
+
+                <div class="hearforyoup-sub-sec3">
+
+                    <div class="hear-diatery">
+                        <label for="hear-diatery" class="hearformheading" >Dietary preference*</label>
+
+                        <select name="cars" id="hear-diatery" &#62;><p class="heararow"></p>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        </select> 
+
+
+                    </div>
+                    <div class="hear-id-proof">
+                        <label for="hearidprof" class="hearformheading">ID proof*</label>
+                        <label for="hearidprof" class="hear-drawselectfilesection"> 
+                            <p class="hearcovid19drawpara ">
+                                Select File <p class="heararow">&#62;</p>
+                            </p>
+                        </label>
+                        <input onchange="return validateIdProof()" type="file" name="hearidprof" id="hearidprof" accept="image/png, image/jpeg">
+                        <label for="hearidprof"> 
+                            <p class="hearcovid19para hearcomanparafooter">
+                                JPEG / PDF format (Minimum 2nd Dose is Mandatory)
+                            </p>
+                        </label>
+                    </div>
+
+                    
+                </div>
+
+                <div class="hearforyoup-sub-sec4">
+                    <button class="hearbutton-section" type="submit" > Next </button>
+                    
+                </div>
+
+            </form>
+
+            
+            
+            
+        </div>
+        </div>
+
+
+    </section>
+
+    <script>
+        const Form = document.querySelector("#hearfromyouForm");
+        const profileImage = document.getElementById("image-avtar");
+        const MobileNumber = document.getElementById("hearnobilenumber");
+        const COVIDVaccination = document.querySelector("#hearcovid19")
+        const idProof = document.querySelector("#hearidprof")
+        console.log(profileImage.value);
+        // console.log(COVIDVaccination);
+
+        function validateavtar() {
+            var profileInput = document.getElementById("image-avtar");
+            var profilePath = profileInput.value;
+            var COVIDVaccination = document.querySelector("#hearcovid19")
+            var idProof = document.querySelector("#hearidprof")
+
+
+
+            // Allowing file type
+            const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+            if(!allowedExtensions.exec(profilePath)){
+                alert("Upload Profile Picture not have valid file Extention");
+                profileInput.value = ``;
+                // console.log(profileImage.value);
+                // return false;
+            }else if ((((profileImage.files[0].size)/1048576) > 2) ){
+                console.log("Profile Picture file size too long ::: ",(profileImage.files[0].size)/1048576);
+                alert("Profile Picture File size is to long");
+                profileInput.value = ``;
+                // console.log(profileImage.value);
+            }else{
+                console.log("Upload Profile Picture :::  ",profileImage.value);
+                profileImage.classList = "success";
+            }   
+
+
+        }
+
+
+        function  validateCOVID() {
+
+            var COVIDVaccination = document.querySelector("#hearcovid19")
+            var idProof = document.querySelector("#hearidprof")
+
+            // Allowing file type
+            const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+            if(!allowedExtensions.exec(COVIDVaccination.value)){
+                alert("COVID-19 Vaccination Certificate* not have valid file Extention");
+                COVIDVaccination.value = ``;
+            }else if((((COVIDVaccination.files[0].size)/1048576) > 2) ){
+                console.log("COVID-19 Vaccination Certificate* File size is to long.  ::: ",(COVIDVaccination.files[0].size)/1048576);
+                alert("COVID-19 Vaccination Certificate* File size is to long.");
+                COVIDVaccination.value = ``;
+            }else{
+                console.log("COVID-19 Vaccination Certificate* :::  ",COVIDVaccination.value);
+                COVIDVaccination.classList = "success";
+            }   
+
+
+        }
+
+        function  validateIdProof() {
+
+            var COVIDVaccination = document.querySelector("#hearcovid19")
+            var idProof = document.querySelector("#hearidprof")
+
+            // Allowing file type
+            const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+            if(!allowedExtensions.exec(idProof.value)){
+                alert("ID proof* not have valid file Extention");
+                idProof.value = ``;
+            }else if((((idProof.files[0].size)/1048576) > 2) ){
+                console.log("ID proof* File size is to long. ::: ",(idProof.files[0].size)/1048576);
+                alert("ID proof* File size is to long.");
+                idProof.value = ``;
+            }else{
+                console.log("ID proof* :::  ",idProof.value);
+                idProof.classList = "success";
+            }   
+
+
+        }
+
+        function NumberValidation(){
+            var MobileNumber = document.getElementById("hearnobilenumber");
+            if(MobileNumber.value.length == 0){
+                document.querySelector("small.errorinput").innerText = "";
+            }
+            else if(isNaN(MobileNumber.value)){
+                document.querySelector("small.errorinput").innerText = ("write proper Number FormData");
+            }
+
+
+            if (MobileNumber.value.length === 10){
+                MobileNumber.classList= "success";
+            }
+            
+                // console.log("mobile number is perfect");
+        }
+
+
+        
+
+        const successfrom = (profileImage, MobileNumber, idProof, COVIDVaccination) => {
+
+            
+                
+                alert("all Done.");
+                window.location.href = "http://127.0.0.1:5500/Questionsubmission.html/";
+                alert( window.location.href);
+                // location.replace("http://127.0.0.1:5500/Questionsubmission.html");
+                //             location.assign("http://127.0.0.1:5500/Questionsubmission.html");
+                alert("all Done.");
+                return true;
+            
+            
+            
+                    
+        }   
+                    
+
+
+        Form.addEventListener("submit", (event) => {
+
+        const Form = document.querySelector("#hearfromyouForm");
+        const profileImage = document.getElementById("image-avtar");
+        const MobileNumber = document.getElementById("hearnobilenumber");
+        const COVIDVaccination = document.querySelector("#hearcovid19")
+        const idProof = document.querySelector("#hearidprof")
+
+
+        
+
+                    if(!(profileImage.className == "success") ){
+                        alert("Profile Picture* File not added.")
+                        return false;
+                    }
+                    if(!(MobileNumber.className == "success") ){
+                        alert("Phone Number not added.")
+                        return false;
+                    }
+                    if(!(idProof.className == "success") ){
+                        alert("idProof* File not added.")
+                        return false;
+                    }
+                    if(!(COVIDVaccination.className == "success") ){
+                        alert("COVID-19 Vaccination Certificate* File not added.")
+                        return false;
+                    }
+                    if(
+                            profileImage.value != "" &&
+                            MobileNumber.value != "" &&
+                            idProof.value != "" &&
+                            COVIDVaccination.value != "" 
+                        )
+                        {
+                            window.location.href = "http://127.0.0.1:5500/Questionsubmission.html/";
+                            
+                    }
+                    
+
+
+                    successfrom();
+                    
+                
+                    
+            }
+        );
+
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- // function validation(){
+
+    //     if(profileImage.classList !== "success" ){
+    //         alert("Profile Picture* File not added.")
+    //         return false;
+    //     }
+    //     if(MobileNumber.classList !== "success" ){
+    //         alert("Phone Number not added.")
+    //         return false;
+    //     }
+    //     if(idProof.classList !== "success" ){
+    //         alert("idProof* File not added.")
+    //         return false;
+    //     }
+    //     if(MobileNumber.classList !== "success" ){
+    //         alert("COVID-19 Vaccination Certificate* File not added.")
+    //         return false;
+    //     }
+        
+
+    //     console.log("inside if");
+    //     location.href = `http://127.0.0.1:5500/OTPindex.html`;
+    //     alert("all Done.");
+
+    // } -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

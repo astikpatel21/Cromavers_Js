@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Croma Electronics | Online Electronics Shopping | Buy Electronics Online</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/OTPstyle.css">
+</head>
+<body>
+    
+    
+    <section class="mainsection">
+        <div class="responsivediv1 hiddendiv"></div>
+        <div class="responsivediv2 maindiv">
+            <div class="submaindiv">
+                <img src="../img/logowebsitemain.png" alt="main logo" height="120" width="auto">
+                <!-- <h1>all about</h1> -->
+                <p class="mainpara boldtext">ANNUAL CONFERENCE, 2023</p>
+                <p class="mainpara thintext">PEOPLE.PURPOSE.Passion</p>
+                <form action="">
+                    <div class="emailform">
+                        <label for="emailid" class="mainlable">Enter your email address
+                        </label><br>
+                        <div class="userInput">
+                            <!-- <input type="text" id="oneOTP" maxlength="1">
+                            <input type="text" id="twoOTP" maxlength="1">
+                            <input type="text" id="threeOTP" maxlength="1">
+                            <input type="text" id="fourOTP" maxlength="1">
+                            <input type="text" id="fiveOTP" maxlength="1">
+                            <input type="text" id="sixOTP" maxlength="1"> -->
+                            <input type="number" id="oneOTP"    >
+                            <input type="number" id="twoOTP" disabled>
+                            <input type="number" id="threeOTP" disabled>
+                            <input type="number" id="fourOTP" disabled>
+                            <input type="number" id="fiveOTP" disabled>
+                            <input type="number" id="sixOTP" disabled>
+                        </div>
+                        <!-- <input type="submit" placeholder="Ragister" text="Ragister" value="Ragister"> -->
+                        <button type="submit" >Ragister</button>
+                    </div>
+                </form>
+                <p class="footerpara margin-top-25">If you are alrady, please <a href="#" target="_blank" rel="noopener noreferrer">click hear to login</a></p>
+                <p class="footerpara">If you have trouble logging in, please contact us at <a href="mailto:cromaverse@croma.com" target="_blank" rel="noopener noreferrer" class="fontdecornone">cromaverse@croma.com</a></p>
+                
+            </div>
+        </div>
+
+        <div class="responsivediv3 hiddendiv">
+            
+        </div>
+
+        <script>
+
+
+            const formDetails = document.querySelector("form");
+            const inputs = document.querySelectorAll("input");
+            const button = document.querySelector("button");
+            console.log(formDetails);
+            console.log(inputs);
+            console.log(button);
+
+                inputs.forEach((input,index1) =>{
+                            // (one, 0)
+                            // (one, 0)                         // zeroposition 
+
+                    input.addEventListener("keyup", (event)=>{
+                        const currentInput = input;
+                        const nextInput = input.nextElementSibling;
+                        const previousInput = input.previousElementSibling;
+
+                        
+                        if(currentInput.value.length > 1){
+                            currentInput.value = ""
+                            return;
+                        }
+
+                        if( nextInput && nextInput.hasAttribute("disabled") && currentInput.value !== "" ){
+                            nextInput.removeAttribute("disabled");
+                            nextInput.focus(); 
+                            console.log(index1,"value of index 1");
+                        }
+
+                        // console.log(event.key);
+                        // console.log(typeof event.key);
+                        console.log(previousInput, "previous Input");
+
+                        if (event.key === "Backspace"){
+
+                            inputs.forEach((input,index2) => {
+                                        // (second, 1)
+                                        // (one, 0)                         // zeroposition 
+                                // if the index1 of the current input is less than or equal to the index2 of the input in the outer loop
+                                
+                                // and the previous element exists, set the disabled attribute on the input and focus on the previous element
+                                if (index1 <= index2 && previousInput) {
+                                    console.log(index2,"value of index 2");
+                                    input.setAttribute("disabled", true);
+                                    input.value = "";
+                                    previousInput.focus();
+                                }
+
+
+
+                            });
+
+
+
+                        }
+
+                        if(!inputs[5].disabled && inputs[5].value !== "" ){
+                            button.classList.add("active");
+                            return;
+                        }
+                        button.classList.remove("active");
+
+                    });
+
+
+
+
+                });
+
+
+                console.log(formDetails);
+                console.log(inputs);
+                console.log(button);
+                
+                formDetails.addEventListener("submit", () => {
+                    if (button.className === "active"){
+                        document.location.href = `http://127.0.0.1:5500/hearforyou.html`;
+                        alert("welcome to cromaverse")
+                    }
+                    else{
+                        return false;
+                    }
+                    
+
+
+
+
+
+            // let formCon = document.querySelector(".emailform");
+            // console.log(formCon.className);
+            // if(formCon.className === "emailform success"){
+            //     console.log("inside if");
+            //     location.href = `http://127.0.0.1:5500/OTPindex.html?mailid=${emailId}`;
+            // }
+            // else{
+            //     return false;
+            // }
+
+
+                });
+
+            
+
+
+
+            // fouce on first input which index is 0 on window load
+            window.addEventListener("load" , ()=> inputs[0].focus());
+
+
+        </script>
+    </section>
+
+
+</body>
+</html>
+
+
+
